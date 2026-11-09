@@ -1,0 +1,388 @@
+:root {
+  --cream: #faf6ef;
+  --rose: #b77c79;
+  --gold: #c6a46b;
+  --dark: #413b36;
+  --muted: #81766e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: "DM Sans", sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(rgba(34, 30, 29, .35), rgba(34, 30, 29, .48)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85")
+    center 55% / cover no-repeat;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(30, 25, 23, .25));
+}
+
+.top-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 8%;
+}
+
+.brand,
+.footer-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+.brand span,
+.footer-logo span {
+  color: #e4c58d;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.hero .eyebrow {
+  color: #f5dfb7;
+}
+
+.hero h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(75px, 12vw, 145px);
+  font-weight: 400;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #e6c58b;
+}
+
+.hero-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.gold-line {
+  width: 70px;
+  height: 1px;
+  background: #e6c58b;
+  margin: 30px auto;
+}
+
+.wedding-date {
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--rose);
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.primary-button:hover {
+  background: #996461;
+  transform: translateY(-2px);
+}
+
+.scroll-note {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 25px;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.section {
+  padding: 100px 8%;
+  text-align: center;
+}
+
+.section h2,
+.message-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 5vw, 55px);
+  font-weight: 500;
+  margin: 16px 0 25px;
+}
+
+.intro-text {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.couple-names {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--rose);
+  font-family: "Great Vibes", cursive;
+  font-size: 55px;
+}
+
+.couple-names small {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  color: var(--gold);
+}
+
+.countdown-section {
+  background: #f0e6dc;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.time-box {
+  background: rgba(255,255,255,.65);
+  border: 1px solid #e3d3c3;
+  width: 125px;
+  padding: 25px 10px;
+}
+
+.time-box strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 43px;
+  font-weight: 500;
+  color: var(--rose);
+}
+
+.time-box span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 950px;
+  margin: 45px auto 0;
+}
+
+.detail-card {
+  padding: 38px 20px;
+  background: white;
+  border: 1px solid #eee2d6;
+}
+
+.detail-icon {
+  color: var(--gold);
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.detail-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.detail-card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.detail-card small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.message-section {
+  position: relative;
+  padding: 110px 20px;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(rgba(44, 36, 32, .57), rgba(44, 36, 32, .57)),
+    url("https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat;
+}
+
+.message-content {
+  position: relative;
+  max-width: 650px;
+  margin: auto;
+}
+
+.message-content h2 {
+  color: white;
+}
+
+.message-content p:last-child {
+  line-height: 1.9;
+  color: #f2e9df;
+  font-size: 14px;
+}
+
+.rsvp-section {
+  background: #f3ebe3;
+}
+
+.rsvp-description {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.rsvp-form {
+  max-width: 520px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.rsvp-form label {
+  display: block;
+  margin: 20px 0 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dfd0c2;
+  background: #fffdfa;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--dark);
+  outline: none;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+  border-color: var(--rose);
+}
+
+.rsvp-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.feedback {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #557b58;
+}
+
+footer {
+  text-align: center;
+  background: #403832;
+  color: white;
+  padding: 50px 20px;
+}
+
+.footer-logo {
+  margin-bottom: 12px;
+}
+
+footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+footer small {
+  color: #d5bd99;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 700px) {
+  .top-nav {
+    padding: 22px 6%;
+  }
+
+  .section {
+    padding: 75px 6%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .time-box {
+    width: calc(50% - 12px);
+  }
+
+  .hero h1 {
+    font-size: 76px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+}
